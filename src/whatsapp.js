@@ -28,7 +28,7 @@ class Getqr {
 // esta clase almacena en memoria el codigo qr obtenido de el evento client.on qr
 var getqr = new Getqr(null);
 
-const whatsapp =  mongoose.connect(process.env.MONGODB_URI).then(() => {
+const whatsapp =  mongoose.connect('mongodb+srv://lucianomocchegiani:yGJeX2t0tqA963dw@cluster0.g4yxxlx.mongodb.net/').then(() => {
 
     const store = new MongoStore({ mongoose: mongoose });
     // se inicializa el cliente y se conecta con la base de datos
