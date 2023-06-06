@@ -36,7 +36,10 @@ const whatsapp =  mongoose.connect('mongodb+srv://lucianomocchegiani:yGJeX2t0tqA
         authStrategy: new RemoteAuth({
             store: store,
             backupSyncIntervalMs: 300000
-        })
+        }),
+        puppeteer: {
+            args: ['--no-sandbox'],
+        }
     });
     // envia mensajes
     ExportFunction.prototype.sendMensaje=(to, mensaje)=>{
