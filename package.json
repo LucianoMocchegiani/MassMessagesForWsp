@@ -1,0 +1,33 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon -L",
+    "test": "mocha -w ./tests/**/*.spec.js"
+  },
+  "author": "Henry",
+  "license": "ISC",
+  "engines": {
+    "node": "18.14.1",
+    "npm": "9.5.0"
+  },
+  "dependencies": {
+    "axios": "^0.27.2",
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "ioredis": "^4.19.2",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^7.2.1",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.6",
+    "pg": "^8.5.1",
+    "qrcode-terminal": "^0.12.0",
+    "whatsapp-web.js": "^1.20.0",
+    "wwebjs-mongo": "^1.1.0"
+  }
+}
