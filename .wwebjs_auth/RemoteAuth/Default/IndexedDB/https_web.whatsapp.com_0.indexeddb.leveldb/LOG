@@ -1,7 +1,10 @@
-2023/06/06-18:26:09.686 5c10 Creating DB C:\Users\Gordo-Ancestral\Desktop\Project\WhatsAppMasive\api\.wwebjs_auth\RemoteAuth\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb since it was missing.
-2023/06/06-18:26:09.791 5c10 Reusing MANIFEST C:\Users\Gordo-Ancestral\Desktop\Project\WhatsAppMasive\api\.wwebjs_auth\RemoteAuth\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
-2023/06/06-18:26:10.032 5018 Manual compaction at level-0 from '\x00\x01\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x02\x00\x00\x00' @ 0 : 0; will stop at (end)
-2023/06/06-18:26:11.607 3d00 Level-0 table #5: started
-2023/06/06-18:26:11.725 3d00 Level-0 table #5: 27999 bytes OK
-2023/06/06-18:26:11.877 3d00 Delete type=0 #3
-2023/06/06-18:26:11.877 3d00 Manual compaction at level-0 from '\x00\x07\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x08\x00\x00\x00' @ 0 : 0; will stop at (end)
+2023/06/06-18:49:13.291 60f4 Creating DB C:\Users\Gordo-Ancestral\Desktop\Project\WhatsAppMasive\api\.wwebjs_auth\RemoteAuth\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb since it was missing.
+2023/06/06-18:49:13.396 60f4 Reusing MANIFEST C:\Users\Gordo-Ancestral\Desktop\Project\WhatsAppMasive\api\.wwebjs_auth\RemoteAuth\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
+2023/06/06-18:49:13.693 3c18 Level-0 table #5: started
+2023/06/06-18:49:13.787 3c18 Level-0 table #5: 7487 bytes OK
+2023/06/06-18:49:13.859 3c18 Delete type=0 #3
+2023/06/06-18:49:13.860 3c18 Manual compaction at level-0 from '\x00\x01\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x02\x00\x00\x00' @ 0 : 0; will stop at (end)
+2023/06/06-18:49:15.505 4c04 Level-0 table #7: started
+2023/06/06-18:49:15.564 4c04 Level-0 table #7: 20469 bytes OK
+2023/06/06-18:49:15.716 4c04 Delete type=0 #4
+2023/06/06-18:49:15.717 4c04 Manual compaction at level-0 from '\x00\x07\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x08\x00\x00\x00' @ 0 : 0; will stop at (end)

@@ -1,12 +1,12 @@
 const { Client, RemoteAuth, MessageMedia } = require('whatsapp-web.js');
 const { MongoStore } = require('wwebjs-mongo');
-const qrcode = require('qrcode-terminal');
+// const qrcode = require('qrcode-terminal');
 const mongoose = require('mongoose');
 
 
-var sendMedia = null;
-var deleteStore = null;
-var cerrarConeccion = null;
+// var sendMedia = null;
+// var deleteStore = null;
+// var cerrarConeccion = null;
 
 class ExportFunction{
 }
@@ -28,7 +28,7 @@ class Getqr {
 // esta clase almacena en memoria el codigo qr obtenido de el evento client.on qr
 var getqr = new Getqr(null);
 
-const whatsapp =  mongoose.connect('mongodb+srv://lucianomocchegiani:yGJeX2t0tqA963dw@cluster0.g4yxxlx.mongodb.net/').then(() => {
+const whatsapp =  mongoose.connect(process.env.MONGODB_URI).then(() => {
 
     const store = new MongoStore({ mongoose: mongoose });
     // se inicializa el cliente y se conecta con la base de datos
@@ -42,28 +42,25 @@ const whatsapp =  mongoose.connect('mongodb+srv://lucianomocchegiani:yGJeX2t0tqA
     ExportFunction.prototype.sendMensaje=(to, mensaje)=>{
         client.sendMessage(to, mensaje)
     }
+    // cierra la sesion del cliente
     ExportFunction.prototype.cerrarSession=()=>{
         client.logout()
     }
-    
 
     // manda mensajes de mediafiles
-    sendMedia = (to, fileUrl)=>{
-        const mediafile= MessageMedia.fromUrl(fileUrl)
-        client.sendMessage(to, mediafile)
-    }
-    // cierra la sesion del cliente
-    cerrarSession = ()=>{
-        client.logout()
-    }
+    // sendMedia = (to, fileUrl)=>{
+    //     const mediafile= MessageMedia.fromUrl(fileUrl)
+    //     client.sendMessage(to, mediafile)
+    // }
     // borra el store de la base de datos de mongo
-    deleteStore = async () =>{
-        await store.delete();
-    }
+    // deleteStore = async () =>{
+    //     await store.delete();
+    // }
     // cierra la coneccion de mongo
-    cerrarConeccion = ()=>{
-        connection.close()
-    }
+    // cerrarConeccion = ()=>{
+    //     connection.close()
+    // }
+
     // escucha mensajes
     const listenMessage = ()=>{
         client.on('message',(mensaje)=>{
@@ -100,7 +97,7 @@ const connection = mongoose.connection;
 connection.once("open",()=>{
     console.log('la base de datos esta conectada')
 })  
-module.exports = {whatsapp , getqr, sendMedia, whatsappFunctions}
+module.exports = {whatsapp , getqr, whatsappFunctions}
 
 
 
